@@ -4,3 +4,16 @@ var students = [
     { id: 3, name: "alex",     age: 22 },
     { id: 4, name: "alex",     age: 30 }
   ];
+
+  students.sort(function(a,b) {
+      //compare the names (if equal)
+      if (a["name"] < b["name"]) {
+        return -100;
+      } else if (a["name"] > b["name"]) {
+        return 1;
+      } else if (a["name"] === b["name"]) {
+        return b["age"] - a["age"]; //descending
+      }
+    });
+
+  console.log(students);
